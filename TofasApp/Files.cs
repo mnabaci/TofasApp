@@ -15,7 +15,7 @@ namespace TofasApp
                 if (Directory.Exists(Path.Combine(parameters.FolderLocation, parameters.OldFolderName)))
                 {
                     Directory.Move(Path.Combine(parameters.FolderLocation, parameters.OldFolderName), Path.Combine(parameters.FolderLocation, parameters.NewFolderName));
-                    File.Copy(Path.Combine(parameters.FolderLocation, "Autostart ISRA.bat"), Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Startup), "Autostart ISRA.bat"), true);
+                    File.Copy(Path.Combine(parameters.FolderLocation, parameters.CopyFileName), Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Startup), parameters.CopyFileName), true);
                     return true;
                 }
                 else
