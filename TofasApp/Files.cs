@@ -37,7 +37,7 @@ namespace TofasApp
                 foreach (var item in files)
                 {
                     XmlSerializer serializer = new XmlSerializer(typeof(ComputerValues));
-                    using (FileStream fileStream = new FileStream(item, FileMode.Open))
+                    using (FileStream fileStream = new FileStream(item, FileMode.Open, FileAccess.Read, FileShare.Read))
                     {
                         ComputerValues result = (ComputerValues)serializer.Deserialize(fileStream);
                         if (string.IsNullOrWhiteSpace(result.ComputerName) || string.IsNullOrWhiteSpace(result.CopyFileName) ||
@@ -52,11 +52,12 @@ namespace TofasApp
                         {
                             returnValues.Add(result);
                         }
+                        fileStream.Close();
                     }
                 }
                 return returnValues;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return new List<ComputerValues>();
             }

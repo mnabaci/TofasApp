@@ -1,9 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <settings>
-  <computerName>Mehmet</computerName>
-  <networkAdapter>Wi-Fi</networkAdapter>
-  <ipAddress>192.168.1.2</ipAddress>
+  <computerName>ISRA105313_3</computerName>
+  <networkAdapter>Yerel Ağ Bağlantısı</networkAdapter>
+  <ipAddress>192.168.100.231</ipAddress>
   <subnet>255.255.255.0</subnet>
-  <gateway>192.168.1.1</gateway>
+  <gateway>192.168.100.1</gateway>
   <fileName>ComputerOne</fileName>
+  <oldFolderName>Campes_HAT1 IST1 - ISRA105313_3</oldFolderName>
+  <newFolderName>Campes</newFolderName>
+  <folderLocation>D:\ISRA</folderLocation>
+  <copyFileName>Autostart ISRA</copyFileName>
 </settings>
